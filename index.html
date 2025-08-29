@@ -2,16 +2,519 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Emergency Service </title>
-       <!-- FAVICON -->
-   <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Service</title>
+
+    <!-- Styles Library -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+
+    <!-- Tailwind CSS File -->
+    <link rel="stylesheet" href="tailwind.init.css" />
 
 
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+
+    <header class="">
+      <!-- Navbar Section -->
+      <nav class="flex flex-col sm:flex-row justify-between items-center gap-5 md:gap-0 py-6 container mx-auto px-3 md:px-0" >
+         <div class="flex gap-[10px] items-center">
+            <img class="w-[50px] h-[50px]" src="./assets/logo.png" alt="logo" />
+            <h3 class="text-[#006747] font-bold text-lg md:text-2xl"> Emergency <br id="brk" /> Service </h3>
+         </div>
+
+      <div class="flex items-center gap-5">
+         <div class="flex items-center gap-[10px] py-3 px-6 md:px-[35.5px] bg-[#41ff6b1a] rounded-[50px]" >
+            <span class="inter text-sm md:text-base font-black text-black" id="heart-count" > 0 </span>
+            <img class="w-[30px] h-[30px]" src="./assets/heart.png" alt="heart" />
+         </div>
+          
+          <div class="flex items-center gap-[10px] py-[14px] px-5 bg-[#41ff6b1a] rounded-[50px]" >
+            <span class="inter text-sm md:text-base font-black text-black" id="coin-count"> 100 </span >
+            <img class="w-[24px] h-[24px]" src="./assets/coin.png" alt="coin" />
+          </div>
+          <button class="inter text-sm md:text-base font-semibold text-white bg-[#00A63E] py-[14px] px-6 md:px-[36px] rounded-[50px]" >
+            <span id="copy-count">0</span> Copy
+          </button>
+      </div>
+      </nav>
+
+      <!-- Banner Section -->
+      <div class="py-[21px] bg-[#013223] bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] flex flex-col items-center justify-center space-y-[11px] text-center px-3 md:px-0" >
+         <img class="w-[92px] h-[92px]" src="./assets/logo-dark.png" alt="logo-dark" />
+         <h2 class="text-white hind font-bold text-2xl md:text-[36px] lg:text-[40px]" > Emergency Service Directory </h2>
+        <p class="container mx-auto font-semibold text-sm sm:text-base md:text-lg lg:text-xl text-white" >
+          Government Emergency Services at Your Fingertip - A Project by
+          Government of the People's Republic of Bangladesh
+        </p>
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="pt-12 pb-[86px] bg-[#f5fff6]">
+      <div class="container mx-auto px-3 md:px-0">
+        <div class="grid grid-cols-12 gap-[30px] lg:gap-6">
+
+      <!-- CARD SECTION -->
+      <section id="card-container"
+      class="col-span-12 lg:col-span-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] lg:gap-6 shadow-lg rounded-xl" >
+            
+<!-- CARD 1 -->
+   <div class="card p-8 bg-white shadow-lg">
+      <div class="flex justify-between items-center">
+         <div class="p-[14px] bg-[#FFE3E2] rounded-2xl">
+               <img class="w-8 h-8" src="./assets/emergency.png" alt="emergency" />
+            </div>
+               <i class="fa-regular fa-heart heart-icon hover:text-red-500 transition-all cursor-pointer text-2xl" > </i>
+            </div>
+
+      <div class="space-y-6 mt-3 flex flex-col justify-between h-full">
+         <div> 
+            <h3 class="card-title text-xl font-bold text-[#111111] hind pb-0.5"> National Emergency Number </h3>
+            <p class="roboto font-normal text-lg text-[#5C5C5C]"> National Emergency </p>
+         </div>
+      <div>
+            <h4 class="number-cls text-[32px] font-bold text-[#111111] roboto pb-0.5"> 999 </h4>
+            <span class="py-[6] px-[16px] bg-[#F2F2F2] hind font-normal text-lg text-[#5C5C5C] rounded-full"> All </span>
+      </div> 
+
+      <div class="flex justify-between gap-2">
+         <button class="card-copy-btn block py-[10.5px] w-full bg-white hover:bg-[#dcdcdc] transition-all text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer" >
+           <i class="fa-regular fa-copy"></i> Copy
+         </button>
+                  
+         <button
+         class="card-call-btn block py-[10.5px] w-full bg-[#00A63E] hover:bg-[#006747] hover:border-[#006747] transition-all text-white roboto font-base font-normal border border-[#00A63E] rounded-lg cursor-pointer" >
+               <i class="fa-solid fa-phone"></i> Call
+         </button>
+
+      </div>
+   </div>
+</div>
+
+<!-- CARD 2 -->
+   <div class="card p-8 bg-white shadow-lg">
+      <div class="flex justify-between items-center">
+         <div class="p-[14px] bg-[#DFEFFF] rounded-2xl">
+               <img class="w-8 h-8" src="./assets/police.png" alt="emergency" />
+            </div>
+               <i class="fa-regular fa-heart heart-icon hover:text-red-500 transition-all cursor-pointer text-2xl"> </i>
+            </div>
+
+      <div class="space-y-6 mt-3 flex flex-col justify-between h-full">
+         <div>
+            <h3 class="card-title text-xl font-bold text-[#111111] hind pb-0.5"> Police Helpline Number </h3>
+            <p class="roboto font-normal text-lg text-[#5C5C5C]"> Police </p>
+         </div>
+
+      <div>
+            <h4 class="number-cls text-[32px] font-bold text-[#111111] roboto pb-0.5"> 999 </h4> 
+            <span class="py-[6] px-[16px] bg-[#F2F2F2] hind font-normal text-lg text-[#5C5C5C] rounded-full"> Police </span>
+      </div>
+      <div class="flex justify-between gap-2">
+            <button class="card-copy-btn block py-[10.5px] w-full bg-white hover:bg-[#dcdcdc] transition-all text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer" >
+              <i class="fa-regular fa-copy"></i> Copy
+            </button>
+
+            <button class="card-call-btn block py-[10.5px] w-full bg-[#00A63E] hover:bg-[#006747] hover:border-[#006747] transition-all text-white roboto font-base font-normal border border-[#00A63E] rounded-lg cursor-pointer" >
+               <i class="fa-solid fa-phone"></i>Call
+            </button>
+      </div>
+   </div>
+</div>
+
+<!-- CARD 3 -->
+   <div class="card p-8 bg-white shadow-lg">
+      <div class="flex justify-between items-center">
+         <div class="p-[14px] bg-[#FFE3E2] rounded-2xl"> <img class="w-8 h-8" src="./assets/fire-service.png" alt="emergency" /> </div> 
+           <i class="fa-regular fa-heart heart-icon hover:text-red-500 transition-all cursor-pointer text-2xl" > </i>
+      </div>
+
+   <div class="space-y-6 mt-3 flex flex-col justify-between h-full">
+      <div>
+         <h3 class="card-title text-xl font-bold text-[#111111] hind pb-0.5" > Fire Service Number </h3>
+         <p class="roboto font-normal text-lg text-[#5C5C5C]"> Fire Service </p>
+      </div>
+
+   <div>
+      <h4 class="number-cls text-[32px] font-bold text-[#111111] roboto pb-0.5"> 999 </h4>
+      <span class="py-[6] px-[16px] bg-[#F2F2F2] hind font-normal text-lg text-[#5C5C5C] rounded-full"> Fire </span>
+   </div>
+         <div class="flex justify-between gap-2">
+            <button class="card-copy-btn block py-[10.5px] w-full bg-white hover:bg-[#dcdcdc] transition-all text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer">
+               <i class="fa-regular fa-copy"></i> Copy
+                  </button>
+               
+           <button class="card-call-btn block py-[10.5px] w-full bg-[#00A63E] hover:bg-[#006747] hover:border-[#006747] transition-all text-white roboto font-base font-normal border border-[#00A63E] rounded-lg cursor-pointer">
+               <i class="fa-solid fa-phone"></i> Call </button>
+         </div>
+      </div>
+   </div>
+            
+<!-- CARD 4 -->
+   <div class="card p-8 bg-white shadow-lg">
+      <div class="flex justify-between items-center">
+         <div class="p-[14px] bg-[#FFE3E2] rounded-2xl">
+                  <img
+                    class="w-8 h-8"
+                    src="./assets/ambulance.png"
+                    alt="emergency"
+                  />
+                </div>
+                <i
+                  class="fa-regular fa-heart heart-icon hover:text-red-500 transition-all cursor-pointer text-2xl"
+                ></i>
+              </div>
+              <div class="space-y-6 mt-3 flex flex-col justify-between h-full">
+                <div>
+                  <h3
+                    class="card-title text-xl font-bold text-[#111111] hind pb-0.5"
+                  >
+                    Ambulance Service
+                  </h3>
+                  <p class="roboto font-normal text-lg text-[#5C5C5C]">
+                    Ambulance
+                  </p>
+                </div>
+                <div>
+                  <h4
+                    class="number-cls text-[32px] font-bold text-[#111111] roboto pb-0.5"
+                  >
+                    1994-999999
+                  </h4>
+                  <span
+                    class="py-[6] px-[16px] bg-[#F2F2F2] hind font-normal text-lg text-[#5C5C5C] rounded-full"
+                    >Health</span
+                  >
+                </div>
+                <div class="flex justify-between gap-2">
+                  <button
+                    class="card-copy-btn block py-[10.5px] w-full bg-white hover:bg-[#dcdcdc] transition-all text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer"
+                  >
+                    <i class="fa-regular fa-copy"></i>
+                    Copy
+                  </button>
+                  <button
+                    class="card-call-btn block py-[10.5px] w-full bg-[#00A63E] hover:bg-[#006747] hover:border-[#006747] transition-all text-white roboto font-base font-normal border border-[#00A63E] rounded-lg cursor-pointer"
+                  >
+                    <i class="fa-solid fa-phone"></i>
+                    Call
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- CARD 5 -->
+            <div class="card p-8 bg-white shadow-lg">
+              <div class="flex justify-between items-center">
+                <div class="p-[14px] bg-[#FFE3E2] rounded-2xl">
+                  <img
+                    class="w-8 h-8"
+                    src="./assets/emergency.png"
+                    alt="emergency"
+                  />
+                </div>
+                <i
+                  class="fa-regular fa-heart heart-icon hover:text-red-500 transition-all cursor-pointer text-2xl"
+                ></i>
+              </div>
+              <div class="space-y-6 mt-3 flex flex-col justify-between h-full">
+                <div>
+                  <h3
+                    class="card-title text-xl font-bold text-[#111111] hind pb-0.5"
+                  >
+                    Women & Child Helpline
+                  </h3>
+                  <p class="roboto font-normal text-lg text-[#5C5C5C]">
+                    Women & Child Helpline
+                  </p>
+                </div>
+                <div>
+                  <h4
+                    class="number-cls text-[32px] font-bold text-[#111111] roboto pb-0.5"
+                  >
+                    109
+                  </h4>
+                  <span
+                    class="py-[6] px-[16px] bg-[#F2F2F2] hind font-normal text-lg text-[#5C5C5C] rounded-full"
+                    >Help</span
+                  >
+                </div>
+                <div class="flex justify-between gap-2">
+                  <button
+                    class="card-copy-btn block py-[10.5px] w-full bg-white hover:bg-[#dcdcdc] transition-all text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer"
+                  >
+                    <i class="fa-regular fa-copy"></i>
+                    Copy
+                  </button>
+                  <button
+                    class="card-call-btn block py-[10.5px] w-full bg-[#00A63E] hover:bg-[#006747] hover:border-[#006747] transition-all text-white roboto font-base font-normal border border-[#00A63E] rounded-lg cursor-pointer"
+                  >
+                    <i class="fa-solid fa-phone"></i>
+                    Call
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- CARD 6 -->
+            <div class="card p-8 bg-white shadow-lg">
+              <div class="flex justify-between items-center">
+                <div class="p-[14px] bg-[#FFE3E2] rounded-2xl">
+                  <img
+                    class="w-8 h-8"
+                    src="./assets/emergency.png"
+                    alt="emergency"
+                  />
+                </div>
+                <i
+                  class="fa-regular fa-heart heart-icon hover:text-red-500 transition-all cursor-pointer text-2xl"
+                ></i>
+              </div>
+              <div class="space-y-6 mt-3 flex flex-col justify-between h-full">
+                <div>
+                  <h3
+                    class="card-title text-xl font-bold text-[#111111] hind pb-0.5"
+                  >
+                    Anti-Corruption Helpline
+                  </h3>
+                  <p class="roboto font-normal text-lg text-[#5C5C5C]">
+                    Anti-Corruption
+                  </p>
+                </div>
+                <div>
+                  <h4
+                    class="number-cls text-[32px] font-bold text-[#111111] roboto pb-0.5"
+                  >
+                    106
+                  </h4>
+                  <span
+                    class="py-[6] px-[16px] bg-[#F2F2F2] hind font-normal text-lg text-[#5C5C5C] rounded-full"
+                    >Govt.</span
+                  >
+                </div>
+                <div class="flex justify-between gap-2">
+                  <button
+                    class="card-copy-btn block py-[10.5px] w-full bg-white hover:bg-[#dcdcdc] transition-all text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer"
+                  >
+                    <i class="fa-regular fa-copy"></i>
+                    Copy
+                  </button>
+                  <button
+                    class="card-call-btn block py-[10.5px] w-full bg-[#00A63E] hover:bg-[#006747] hover:border-[#006747] transition-all text-white roboto font-base font-normal border border-[#00A63E] rounded-lg cursor-pointer"
+                  >
+                    <i class="fa-solid fa-phone"></i>
+                    Call
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- CARD 7 -->
+            <div class="card p-8 bg-white shadow-lg">
+              <div class="flex justify-between items-center">
+                <div class="p-[14px] bg-[#FFE3E2] rounded-2xl">
+                  <img
+                    class="w-8 h-8"
+                    src="./assets/emergency.png"
+                    alt="emergency"
+                  />
+                </div>
+                <i
+                  class="fa-regular fa-heart heart-icon hover:text-red-500 transition-all cursor-pointer text-2xl"
+                ></i>
+              </div>
+              <div class="space-y-6 mt-3 flex flex-col justify-between h-full">
+                <div>
+                  <h3
+                    class="card-title text-xl font-bold text-[#111111] hind pb-0.5"
+                  >
+                    Electricity Helpline
+                  </h3>
+                  <p class="roboto font-normal text-lg text-[#5C5C5C]">
+                    Electricity Outage
+                  </p>
+                </div>
+                <div>
+                  <h4
+                    class="number-cls text-[32px] font-bold text-[#111111] roboto pb-0.5"
+                  >
+                    16216
+                  </h4>
+                  <span
+                    class="py-[6] px-[16px] bg-[#F2F2F2] hind font-normal text-lg text-[#5C5C5C] rounded-full"
+                    >Electricity</span
+                  >
+                </div>
+                <div class="flex justify-between gap-2">
+                  <button
+                    class="card-copy-btn block py-[10.5px] w-full bg-white hover:bg-[#dcdcdc] transition-all text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer"
+                  >
+                    <i class="fa-regular fa-copy"></i>
+                    Copy
+                  </button>
+                  <button
+                    class="card-call-btn block py-[10.5px] w-full bg-[#00A63E] hover:bg-[#006747] hover:border-[#006747] transition-all text-white roboto font-base font-normal border border-[#00A63E] rounded-lg cursor-pointer"
+                  >
+                    <i class="fa-solid fa-phone"></i>
+                    Call
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- CARD 8 -->
+            <div class="card p-8 bg-white shadow-lg">
+              <div class="flex justify-between items-center">
+                <div class="p-[14px] bg-[#FFE3E2] rounded-2xl">
+                  <img
+                    class="w-8 h-8"
+                    src="./assets/brac.png"
+                    alt="emergency"
+                  />
+                </div>
+                <i
+                  class="fa-regular fa-heart heart-icon hover:text-red-500 transition-all cursor-pointer text-2xl"
+                ></i>
+              </div>
+              <div class="space-y-6 mt-3 flex flex-col justify-between h-full">
+                <div>
+                  <h3
+                    class="card-title text-xl font-bold text-[#111111] hind pb-0.5"
+                  >
+                    Brac Helpline
+                  </h3>
+                  <p class="roboto font-normal text-lg text-[#5C5C5C]">Brac</p>
+                </div>
+                <div>
+                  <h4
+                    class="number-cls text-[32px] font-bold text-[#111111] roboto pb-0.5"
+                  >
+                    16445
+                  </h4>
+                  <span
+                    class="py-[6] px-[16px] bg-[#F2F2F2] hind font-normal text-lg text-[#5C5C5C] rounded-full"
+                    >NGO</span
+                  >
+                </div>
+                <div class="flex justify-between gap-2">
+                  <button
+                    class="card-copy-btn block py-[10.5px] w-full bg-white hover:bg-[#dcdcdc] transition-all text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer"
+                  >
+                    <i class="fa-regular fa-copy"></i>
+                    Copy
+                  </button>
+                  <button
+                    class="card-call-btn block py-[10.5px] w-full bg-[#00A63E] hover:bg-[#006747] hover:border-[#006747] transition-all text-white roboto font-base font-normal border border-[#00A63E] rounded-lg cursor-pointer"
+                  >
+                    <i class="fa-solid fa-phone"></i>
+                    Call
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- CARD 9 -->
+            <div
+              class="card p-8 bg-white shadow-lg flex flex-col justify-between"
+            >
+              <div class="flex justify-between items-center">
+                <div class="p-[14px] bg-[#FFE3E2] rounded-2xl">
+                  <img
+                    class="w-8 h-8"
+                    src="./assets/Bangladesh-Railway.png"
+                    alt="emergency"
+                  />
+                </div>
+                <i
+                  class="fa-regular fa-heart heart-icon hover:text-red-500 transition-all cursor-pointer text-2xl"
+                ></i>
+              </div>
+              <div class="space-y-6 mt-3 flex flex-col justify-between h-full">
+                <div>
+                  <h3
+                    class="card-title text-xl font-bold text-[#111111] hind pb-0.5"
+                  >
+                    Bangladesh Railway Helpline
+                  </h3>
+                  <p class="roboto font-normal text-lg text-[#5C5C5C]">
+                    Bangladesh Railway
+                  </p>
+                </div>
+                <div>
+                  <h4
+                    class="number-cls text-[32px] font-bold text-[#111111] roboto pb-0.5"
+                  >
+                    163
+                  </h4>
+                  <span
+                    class="py-[6] px-[16px] bg-[#F2F2F2] hind font-normal text-lg text-[#5C5C5C] rounded-full"
+                    >Travel</span
+                  >
+                </div>
+                <div class="flex justify-between gap-2">
+                  <button
+                    class="card-copy-btn block py-[10.5px] w-full bg-white hover:bg-[#dcdcdc] transition-all text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer"
+                  >
+                    <i class="fa-regular fa-copy"></i>
+                    Copy
+                  </button>
+                  <button
+                    class="card-call-btn block py-[10.5px] w-full bg-[#00A63E] hover:bg-[#006747] hover:border-[#006747] transition-all text-white roboto font-base font-normal border border-[#00A63E] rounded-lg cursor-pointer"
+                  >
+                    <i class="fa-solid fa-phone"></i>
+                    Call
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- CALL HISTORY SECTION -->
+          <aside
+            id="call-history-container"
+            class="col-span-12 lg:col-span-3 p-6 bg-white shadow-lg rounded-xl"
+          >
+            <div class="flex justify-between items-center mb-4">
+              <p class="roboto font-medium text-xl text-[#111111]">
+                <i class="fa-regular fa-clock text-[#5C5C5C]"></i>
+                Call History
+              </p>
+              <button
+                id="clear-btn"
+                class="py-[14px] px-[36px] lg:px-7 bg-[#00A63E] rounded-[50px] cursor-pointer text-white inter font-semibold text-base"
+              >
+                Clear
+              </button>
+            </div>
+            <div class="space-y-2">
+              <h3
+                id="no-history"
+                class="mt-5 roboto font-medium text-base text-[#5C5C5C]"
+              >
+                No History yet...
+              </h3>
+              <div id="call-history-list" class="space-y-2"></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <!-- Javascript File Connect -->
+    <script src="js/index.js"></script>
+  </body>
 </html>
